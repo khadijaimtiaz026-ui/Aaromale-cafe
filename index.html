@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Aaromale Café</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h2>Aaromale Café</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="bestsellers.html">Bestsellers</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- HERO SLIDESHOW -->
+<div class="hero">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836')"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9')"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085')"></div>
+
+<div class="content">
+<h1>Welcome to Aaromale Café</h1>
+<p>Hyderabad’s cozy café experience ☕</p>
+<button onclick="location.href='menu.html'">Explore Menu</button>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Why Choose Us</h2>
+<p>Fresh ingredients, cozy ambience, and premium café experience.</p>
+</div>
+
+<footer>
+<p>📍 Film Nagar, Hyderabad</p>
+<p>📞 +91 98765 43210</p>
+<p>📧 aaromale.cafe@gmail.com</p>
+</footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+
+</html>
